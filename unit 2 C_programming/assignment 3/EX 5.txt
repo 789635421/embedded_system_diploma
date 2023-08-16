@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,j ,n,location ,y;
+
+	printf("enter no of element: ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&n);
+	int x[n];
+	//get the data of array
+	for (i=0;i<n;i++)
+	{
+		x[i]=(i+1)*10+(i+1);
+	}
+	//print element of array
+	for (i=0;i<n;i++)
+	{
+		printf("%d\t",x[i]);
+	}
+	//get the element would be search
+	printf("\n enter the element search: ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&j);
+     //get location of element search it
+
+	for(i=0;i<n;i++)
+	{
+		if(x[i]==j)
+		{
+			location =i+1 ;
+			y=1;
+			break;
+		}
+
+	}
+	//show the status of element search 
+	if(y==1)
+	{
+		printf("number found at location : %d " ,location);
+	}
+	else
+	{
+		printf("number not found ");
+	}
+
+
+	return EXIT_SUCCESS;
+}

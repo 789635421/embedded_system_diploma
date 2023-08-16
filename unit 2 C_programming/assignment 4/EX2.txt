@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int x=1;
+int factorial (int f)
+{
+	if(f>0)
+	{
+		x*=f;
+		f--;
+		factorial(f);
+	}
+	return(x);
+}
+int main(void)
+{
+	int y ;
+	printf("enter a positive integer: ");
+	fflush(stdout);fflush(stdin);
+	scanf ("%d" , &y);
+	printf ("factor of %d = %d " , y,factorial(y));
+
+	return EXIT_SUCCESS;
+}
+

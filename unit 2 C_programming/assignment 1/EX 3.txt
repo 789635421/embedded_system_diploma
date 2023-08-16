@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(void)
+{
+	int no1 ,no2;
+	printf("Enter two integers: ");
+	fflush(stdout);
+	scanf("%d %d",&no1,&no2);
+	printf("Sum: %d",no1 +no2);
+	return 0;
+}

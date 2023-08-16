@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int z=0 ,c=1;
+int power_value (int y,int x)
+{
+	z++;
+	if(z<=x)
+	{
+		c*=y;
+		power_value (y,x);
+	}
+	return(c);
+
+}
+
+int main(void)
+{
+    int base_no ,power_no ;
+	printf("enter base number:  ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d" ,&base_no);
+
+	printf("enter power number(positive value): ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d" ,&power_no);
+
+	printf("%d ^ %d =  %d" ,base_no ,power_no ,power_value (base_no ,power_no)) ;
+
+	return EXIT_SUCCESS;
+}

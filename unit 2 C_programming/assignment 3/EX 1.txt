@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+
+//declaration of matrix
+	float m1[2][2],m2[2][2],sum_m[2][2];
+	int u,i ;
+	printf("enter the element of 1st matrix\n");
+	//get the value of 1st matrix
+	for ( i=0 ;i<2 ;i++)
+	{
+		for ( u=0 ; u<2 ;u++)
+		{
+
+			printf(" enter the items (%d,%d): " ,i+1 ,u+1);
+			fflush (stdout);fflush(stdin);
+			scanf("%f" ,&m1[i][u]);
+
+		}
+
+	}
+	printf ("\n\n");
+	printf("enter the element of 2st matrix\n");
+	//get the value of 1st matrix and get sum matrix
+	for ( i=0 ;i<2 ;i++)
+	{
+		for ( u=0 ; u<2 ;u++)
+		{
+			printf(" enter the items of(%d,%d): " ,i+1 ,u+1);
+			fflush (stdout);fflush(stdin);
+			scanf("%f" ,&m2[i][u]);
+			sum_m[i][u] =m1[i][u]+ m2 [i][u];
+
+		}
+
+	}
+
+	printf ("\n\n");
+
+	printf("sum of matrix: \n");
+	//print sum matrix
+	for ( i=0 ;i<2 ;i++)
+	{
+		for ( u=0 ; u<2 ;u++)
+		{
+			printf("%f \t" ,sum_m[i][u]);
+
+		}
+		printf ("\n\n");
+	}
+
+	return EXIT_SUCCESS;
+}

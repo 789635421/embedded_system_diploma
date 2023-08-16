@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+int i,r,c,u ;
+	//get the rows and column of matrix
+	printf("enter row and column of matrix: ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d %d",&r,&c);
+	float x[r][c],y[c][r];
+	printf("enter the element of matrix: \n");
+	//get the data of matrix
+	for (i=0;i<r;i++)
+	{
+		for(u=0;u<c;u++)
+		{
+			printf("enter the element a%d%d :",i+1,u+1);
+			fflush(stdout);fflush(stdin);
+			scanf("%f",&x[i][u]);
+
+		}
+
+	}
+	printf("\n");
+	printf("enter matrix\n");
+
+	//print matrix element
+	for (i=0;i<r;i++)
+	{
+		for(u=0;u<c;u++)
+		{
+			printf("%f\t",x[i][u]);
+
+		}
+		printf("\n");
+	}
+	printf("\n");
+	printf("transpose of matrix");
+        // conver matrix to transpose it
+	for (i=0;i<r;i++)
+	{
+		for(u=0;u<c;u++)
+		{
+			y[u][i]=x[i][u];
+
+		}
+
+		printf("\n");
+	}
+
+          //print transpose matrix
+	for (i=0;i<c;i++)
+	{
+		for(u=0;u<r;u++)
+		{
+			printf("%f\t",y[i][u]);
+
+		}
+
+		printf("\n");
+	}
+
+	return EXIT_SUCCESS;
+}

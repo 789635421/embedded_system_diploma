@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(void)
+{
+	char a;
+	printf("Enter a character:");
+	fflush(stdout);
+	scanf("%c",&a);
+	printf("ASCII value of %c : %d",a,a);
+	return 0;
+}

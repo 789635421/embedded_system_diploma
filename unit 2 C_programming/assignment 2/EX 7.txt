@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(void)
+{
+	int n ,factor=1;
+	printf("Enter a integer number: ");
+	fflush(stdout);
+	scanf("%d",&n);
+	if (n<0)
+	{
+		printf("erorrr!! factor of negative number dosen`t exsist");
+	}
+	else if(n>0)
+	{
+		for (int i=1;i<=n;i++)
+
+		{
+			factor *=i;
+		}
+		printf ("factor of %d =%d ",n,factor);
+	}
+	else
+	{
+		printf("factor of %d = %d" ,n,0);
+	}
+
+	return 0;
+}

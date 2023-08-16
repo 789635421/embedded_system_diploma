@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+        int i,j ,n,location;
+
+	printf("enter no of element: ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&n);
+	int x[n],y[n+1];
+	//get the data of array
+	for (i=0;i<n;i++)
+	{
+		x[i]=i+1;
+	}
+	//print element of array
+	for (i=0;i<n;i++)
+	{
+		printf("%d\t",x[i]);
+	}
+	//get the element would be insert
+	printf("\n enter the element to be insert: ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&j);
+     //get location of element insert
+	printf("\n enter the location : ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&location);
+    //insert the element 
+	for(i=0;i<n+1;i++)
+	{
+		if(location==i+1)
+		{
+			y[location-1] =j;
+			for(i=location;i<n+1;i++)
+			{
+				y[i]=x[i-1];
+			}
+		}
+		y[i]=x[i];
+	}
+    //show the array after insert element
+	for (i=0;i<n+1;i++)
+	{
+		printf("%d\t",y[i]);
+	}
+
+	return EXIT_SUCCESS;
+}

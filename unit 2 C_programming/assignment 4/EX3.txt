@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int z=-1;
+char enverse_text (char y[],int x)
+{
+	z++;
+	if(z<x)
+	{
+		printf ( "%c" ,y[x-z-1]);
+		enverse_text (y,x);
+	}
+	return(0);
+
+}
+
+
+
+int main(void)
+{
+	char y[50] ;
+	printf("enter a sentence:  ");
+	fflush(stdout);fflush(stdin);
+	gets(y);
+	int count ;
+	count = strlen(y);
+	enverse_text (y ,count);
+
+
+	return EXIT_SUCCESS;
+}
+

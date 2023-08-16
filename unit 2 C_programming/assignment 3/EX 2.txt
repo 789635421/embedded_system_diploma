@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+int i,n ;
+	//get the number of element
+	printf("enter the number of data: ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&n);
+	float x[n],sum=0;
+	//get the data of matrix
+	for (i=0;i<n;i++)
+	{
+		printf("%d. enter number: ",i+1);
+		fflush(stdout);fflush(stdin);
+		scanf("%f",&x[i]);
+		sum+=x[i];
+	}
+	//print average data
+	printf("average = %f", sum/n);
+
+	return EXIT_SUCCESS;
+}

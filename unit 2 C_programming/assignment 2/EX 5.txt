@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(void)
+{
+	char s;
+	printf("Enter a character : ");
+	fflush(stdout);
+	scanf("%c",&s);
+	if ( (s>='a' && s<='z') || (s>='A' && s<='Z'))
+	{
+		printf("%c is alphabetic ",s);
+	}
+
+	else
+	{
+		printf("%c is not alphabetic " ,s);
+	}
+	return 0;
+}

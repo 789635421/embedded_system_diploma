@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void)
+{
+	char text [100];
+	int count=0 ;
+	//get string from user
+	printf("enter a string : ");
+	fflush(stdout);fflush(stdin);
+	gets(text);
+    //count the element of string
+	for (int i=0 ;i<100 && text[i]!=0 ;i++)
+	{
+
+	  count+=1 ;
+
+	}
+	char y[count];
+	//print array if reverse name
+
+	for(int i=0 ;i<count ;i++)
+	{
+		y[i]=text[count-i-1];
+	}
+
+	printf("reverse string is: %s" ,&y[0]);
+
+
+
+	return EXIT_SUCCESS;
+}

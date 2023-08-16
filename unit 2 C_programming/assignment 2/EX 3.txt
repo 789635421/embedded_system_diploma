@@ -1,0 +1,58 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(void)
+{
+	float s,d,f;
+	printf("Enter three numbers : ");
+	fflush(stdout);
+	scanf("%f %f %f",&s,&d,&f);
+
+	if(s>=d && s>=f )
+	{
+		if (s==d&&s!=f)
+			printf("%f %f this numbers has the largest value",s,d);
+		else if (s==f&& s!=d)
+			printf("%f %f this numbers has the largest value",s,f);
+		else if (s==d && s==f)
+			printf("the three number are equal");
+		else
+		{
+			printf("%f is largest",s);
+		}
+	}
+
+	else if(d>=s && d>=f)
+	{
+		if (d==s&&d!=f)
+			printf("%f %f this numbers has the largest value",s,d);
+		else if (d==f&& d!=s)
+			printf("%f %f this numbers has the largest value",d,f);
+		else if (s==d && s==f)
+			printf("the three number are equal");
+		else
+		{
+			printf("%f is largest",d);
+		}
+	}
+
+	else if(f>=d && f>=s)
+	{
+		if (f==d&&f!=s)
+			printf("%f %f this numbers has the largest value",f,d);
+		else if (f==s&& f!=d)
+			printf("%f %f this numbers has the largest value",s,f);
+		else if (s==d && s==f)
+			printf("the three number are equal");
+		else
+		{
+			printf("%f is largest",f);
+		}
+	}
+
+
+	return 0;
+}
