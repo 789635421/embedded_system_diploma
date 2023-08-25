@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Sstudent
+{
+	char name[50] ;
+	int roll;
+	float marks;
+};
+
+int main ()
+{
+	struct Sstudent s;
+	printf ("enter information about student: \n");
+	printf("\nenter name: ");
+	fflush(stdout);
+	gets(s.name);
+	printf("enter roll number: ");
+	fflush(stdout);
+	scanf("%d",&s.roll);
+	printf("enter marks: ");
+	fflush(stdout);
+	scanf("%f",&s.marks);
+    printf("\ndisplaying information");
+    printf("\nname: %s \nroll: %d \nmarks: %0.2f",s.name,s.roll,s.marks);
+
+	return 0;
+}

@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define pi 3.1428
+#define  area_of_circle(r) pi*r*r
+int main ()
+{
+	float area;
+	area= area_of_circle(5);
+	printf("area= %0.3f ",area);
+	return 0;
+}

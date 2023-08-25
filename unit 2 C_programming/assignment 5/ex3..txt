@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Sfeet_distance
+{
+	float real ;
+	float imaginary;
+}f,f1;
+struct Sfeet_distance add(struct Sfeet_distance x ,struct Sfeet_distance y);
+int main ()
+{
+	struct Sfeet_distance f3 ;
+	printf("for 1st complex \n");
+	printf("enter real and imaginary number respectively: ");
+	fflush(stdout);
+	scanf("%f  %f",&f.real,&f.imaginary);
+	printf("\nfor 2st complex \n");
+	printf("enter real and imaginary number respectively: ");
+	fflush(stdout);
+	scanf("%f %f",&f1.real,&f1.imaginary);
+	f3=add(f,f1);
+	printf("sum = %0.1f+%0.1fi",f3.real ,f3.imaginary);
+	return 0;
+}
+struct Sfeet_distance add(struct Sfeet_distance x ,struct Sfeet_distance y)
+{
+	struct Sfeet_distance z;
+	z.real=x.real+y.real;
+	z.imaginary=x.imaginary+y.imaginary;
+	return z;
+}

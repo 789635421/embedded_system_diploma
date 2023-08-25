@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Sfeet_distance
+{
+	int feet ;
+	float inch;
+}f,f1;
+
+int main ()
+{
+
+
+	printf("enter information for 1th distance \n");
+	printf("enter feet:");
+	fflush(stdout);
+	scanf("%d",&f.feet);
+	printf("enter inch: ");
+	fflush(stdout);
+	scanf("%f",&f.inch);
+	printf("\nenter information for 2th distance\n");
+	printf("enter feet:");
+	fflush(stdout);
+	scanf("%d",&f1.feet);
+	printf("enter inch: ");
+	fflush(stdout);
+	scanf("%f",&f1.inch);
+	if (f.inch+f1.inch<12)
+	{
+		printf("\nsum of distance=%d'-%0.1f\"",f.feet+f1.feet,f.inch+f1.inch);
+	}
+	else if (f.inch+f1.inch==12)
+	{
+		printf("\nsum of distance=%d'-%0.1f\"",f.feet+f1.feet+1,0.0);
+
+	}
+	else
+	{
+		printf("\nsum of distance=%d'-%0.1f\"",f.feet+f1.feet+1,f.inch+f1.inch-12);
+
+	}
+
+	return 0;
+}
