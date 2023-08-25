@@ -7,7 +7,7 @@
 
 int main(void)
 {
-printf(C Programming);
+printf("C Programming");
 
 return 0;
 } 
