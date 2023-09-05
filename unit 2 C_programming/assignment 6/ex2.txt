@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+	char x=65;
+	char *px=&x;
+	for(int i=65;i<91;i++)
+	{
+		printf("%c ",*px);
+		x++;
+	}
+	return 0;
+}

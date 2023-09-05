@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct Semploy
+{
+	char name[30];
+	int age ;
+};
+
+int main ()
+{
+	struct Semploy emp1={"hassan",21} ,emp2= {"abdo" ,18};
+	struct Semploy* arr[2]= {&emp1 ,&emp2 };
+	struct Semploy(*(*parr)[2])=&arr ;
+	printf ("%s   \n",(*(*parr))->name );
+	printf ("%d \n",(*(*parr))->age );
+
+	printf ("%s   \n",(*(*parr+1))->name );
+	printf ("%d \n",(*(*parr+1))->age );
+	return 0;
